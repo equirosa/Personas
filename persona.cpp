@@ -18,7 +18,7 @@ string Persona::getNombre(){
     return nombre;
 }
 
-string Persona::getEdad(){
+int Persona::getEdad(){
     return edad;
 }
 
@@ -29,7 +29,7 @@ string Persona::getNacionalidad(){
 string Persona::saludar(Persona amigo){
     string saludo = string("Hola!") + amigo.getNombre();
     string respuesta = amigo.devolverSaludo(saludo);
-    return (saludo << string("\n") << respuesta);
+    return (saludo + string("\n") + respuesta);
 }
 
 string Persona::devolverSaludo(string saludo){
